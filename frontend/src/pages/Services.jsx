@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar';
+import Layout from './Layout';
 
 const Services = () => {
   const currentYear = new Date().getFullYear();
@@ -104,9 +105,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b w-full from-sky-950 to-indigo-950">
-      {/* Header - Fixed for better navigation */}
-      <NavBar/>
+    <Layout>
 
       {/* Hero Section */}
       <section className="pt-32 pb-16">
@@ -304,55 +303,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Enhanced Footer */}
-      <footer className="bg-sky-950 text-white py-12 border-t border-sky-800/30">
-        <div className="w-full mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-white">SwiftTech</h3>
-              <p className="text-sky-300 mb-4">Transforming ideas into digital reality since 2018.</p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-sky-400 hover:text-white transition-colors">FB</a>
-                <a href="#" className="text-sky-400 hover:text-white transition-colors">TW</a>
-                <a href="#" className="text-sky-400 hover:text-white transition-colors">IG</a>
-                <a href="#" className="text-sky-400 hover:text-white transition-colors">LI</a>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
-              <ul className="space-y-2">
-                <li><Link to="/services/web" className="text-sky-300 hover:text-white transition-colors">Web Development</Link></li>
-                <li><Link to="/services/mobile" className="text-sky-300 hover:text-white transition-colors">Mobile Apps</Link></li>
-                <li><Link to="/services/whatsapp" className="text-sky-300 hover:text-white transition-colors">WhatsApp Messaging</Link></li>
-                <li><Link to="/services/ui-design" className="text-sky-300 hover:text-white transition-colors">UI/UX Design</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Company</h4>
-              <ul className="space-y-2">
-                <li><Link to="/about" className="text-sky-300 hover:text-white transition-colors">About Us</Link></li>
-                <li><Link to="/team" className="text-sky-300 hover:text-white transition-colors">Our Team</Link></li>
-                <li><Link to="/careers" className="text-sky-300 hover:text-white transition-colors">Careers</Link></li>
-                <li><Link to="/blog" className="text-sky-300 hover:text-white transition-colors">Blog</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Legal</h4>
-              <ul className="space-y-2">
-                <li><Link to="/privacy" className="text-sky-300 hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="text-sky-300 hover:text-white transition-colors">Terms of Service</Link></li>
-                <li><Link to="/cookies" className="text-sky-300 hover:text-white transition-colors">Cookie Policy</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-sky-800/30 pt-8 text-center">
-            <p className="text-sky-300">
-              &copy; {currentYear} SwiftTech Company Ltd. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </Layout>
   );
 };
 

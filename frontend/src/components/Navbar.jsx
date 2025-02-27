@@ -15,16 +15,16 @@ const NavBar = ({ currentPage }) => {
   ];
   
   return (
-    <header className="bg-green-950 shadow-lg fixed w-full z-10 border-b border-green-800/30 backdrop-blur-sm">
+    <header className="bg-emerald-950 shadow-lg fixed w-full z-10 border-b border-emerald-800/30 backdrop-blur-sm">
       <div className="w-full mx-auto px-4 py-3 flex flex-col md:flex-row md:justify-between md:items-center">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <span className="text-3xl font-bold text-white tracking-tight">
-              <span className="text-green-400">Whats</span>Bulk
+              <span className="text-emerald-400">Whats</span>Bulk
             </span>
           </Link>
           <button
-            className="md:hidden bg-green-600 text-white p-2 rounded-md hover:bg-green-700 transition-colors"
+            className="md:hidden bg-emerald-600 text-white p-2 rounded-md hover:bg-emerald-700 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,23 +39,23 @@ const NavBar = ({ currentPage }) => {
             <Link
               key={index}
               to={link.to}
-              className={`text-white font-medium hover:text-green-400 transition-colors ${link.to === currentPage ? "text-green-400" : ""}`}
+              className={`text-white font-medium hover:text-emerald-400 transition-colors ${link.to === currentPage ? "text-emerald-400" : ""}`}
             >
               {link.label}
             </Link>
           ))}
           
           {/* Auth buttons */}
-          <div className="flex items-center space-x-3 pl-6 border-l border-green-800">
+          <div className="flex items-center space-x-3 pl-6 border-l border-emerald-800">
             <Link
               to="/login"
-              className="text-white hover:text-green-300 transition-colors"
+              className="text-white hover:text-emerald-300 transition-colors"
             >
               Sign In
             </Link>
             <Link
               to="/signup"
-              className="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg transition-colors shadow-lg shadow-green-900/20"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg transition-colors shadow-lg shadow-emerald-900/20"
             >
               Sign Up Free
             </Link>
@@ -64,31 +64,31 @@ const NavBar = ({ currentPage }) => {
         
         {/* Mobile menu */}
         {menuOpen && (
-          <nav className="md:hidden mt-4 py-2 bg-green-900/95 backdrop-blur-sm border border-green-800/50 rounded-md shadow-lg">
+          <nav className="md:hidden mt-4 py-2 bg-emerald-900/95 backdrop-blur-sm border border-emerald-800/50 rounded-md shadow-lg">
             <div className="flex flex-col space-y-1 px-4">
               {navLinks.map((link, index) => (
                 <Link
                   key={index}
                   to={link.to}
-                  className={`text-white hover:text-green-400 transition-colors py-3 px-2 ${
-                    link.to === currentPage ? "text-green-400 font-medium bg-green-800/30 rounded-md" : ""
+                  className={`text-white hover:text-emerald-400 transition-colors py-3 px-2 ${
+                    link.to === currentPage ? "text-emerald-400 font-medium bg-emerald-800/30 rounded-md" : ""
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="border-t border-green-800/50 my-2 pt-2 space-y-2">
+              <div className="border-t border-emerald-800/50 my-2 pt-2 space-y-2">
                 <Link
                   to="/login"
-                  className="block text-white hover:text-green-400 transition-colors py-3 px-2"
+                  className="block text-white hover:text-emerald-400 transition-colors py-3 px-2"
                   onClick={() => setMenuOpen(false)}
                 >
                   Sign In
                 </Link>
                 <Link
                   to="/signup"
-                  className="block bg-green-600 hover:bg-green-500 text-white py-3 px-2 rounded-md transition-colors"
+                  className="block bg-emerald-600 hover:bg-emerald-500 text-white py-3 px-2 rounded-md transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   Sign Up Free

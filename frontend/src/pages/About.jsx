@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import image from './../assets/1.jpg'
 import NavBar from '../components/Navbar';
+import Layout from './Layout';
 
 const About = () => {
   const currentYear = new Date().getFullYear();
-  
+
   // Navigation links for easier updates
   const navLinks = [
     { to: "/", label: "Home" },
@@ -16,10 +17,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b w-full from-sky-950 to-indigo-950">
-      {/* Header - Fixed for better navigation */}
-      <NavBar/>
-
+    <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16">
         <div className="w-full mx-auto px-4 text-center">
@@ -31,7 +29,7 @@ const About = () => {
           </p>
         </div>
       </section>
-      
+
       {/* Our Story Section */}
       <section className="w-full mx-auto px-4 py-12">
         <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl shadow-lg mb-12 max-w-4xl mx-auto border border-sky-800/30">
@@ -52,12 +50,12 @@ const About = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img src={image} className="bg-sky-900/30 h-64 rounded-lg border border-sky-800/30"/>
+              <img src={image} className="bg-sky-900/30 h-64 rounded-lg border border-sky-800/30" />
             </div>
           </div>
         </div>
       </section>
-      
+
       {/* Our Team Section */}
       <section className="bg-sky-900/30 py-16 backdrop-blur-sm border-y border-sky-800/30">
         <div className="w-full mx-auto px-4">
@@ -216,85 +214,10 @@ const About = () => {
           </div>
         </div>
       </section>
+    </Layout>
 
-      {/* Contact Information */}
-      <section className="bg-sky-900/30 py-16 backdrop-blur-sm border-y border-sky-800/30">
-        <div className="w-full mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="bg-sky-700/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-sky-400/30">
-                <span className="text-2xl text-white">📍</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Our Location</h3>
-              <p className="text-sky-200">Kigali, Rwanda<br />Kicukiro, Gikondo KST 344 St</p>
-            </div>
-            <div>
-              <div className="bg-indigo-700/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-400/30">
-                <span className="text-2xl text-white">📞</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <p className="text-sky-200">+250 78528 3918</p>
-            </div>
-            <div>
-              <div className="bg-cyan-700/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
-                <span className="text-2xl text-white">✉️</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <p className="text-sky-200">info@swifttech.co.rw</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Enhanced Footer */}
-      <footer className="bg-sky-950 text-white py-12 border-t border-sky-800/30">
-        <div className="w-full mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-white">SwiftTech</h3>
-              <p className="text-sky-300 mb-4">Transforming ideas into digital reality since 2018.</p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-sky-400 hover:text-white transition-colors">FB</a>
-                <a href="#" className="text-sky-400 hover:text-white transition-colors">TW</a>
-                <a href="#" className="text-sky-400 hover:text-white transition-colors">IG</a>
-                <a href="#" className="text-sky-400 hover:text-white transition-colors">LI</a>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
-              <ul className="space-y-2">
-                <li><Link to="/services/web" className="text-sky-300 hover:text-white transition-colors">Web Development</Link></li>
-                <li><Link to="/services/mobile" className="text-sky-300 hover:text-white transition-colors">Mobile Apps</Link></li>
-                <li><Link to="/services/whatsapp" className="text-sky-300 hover:text-white transition-colors">WhatsApp Messaging</Link></li>
-                <li><Link to="/services/ui-design" className="text-sky-300 hover:text-white transition-colors">UI/UX Design</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Company</h4>
-              <ul className="space-y-2">
-                <li><Link to="/about" className="text-sky-300 hover:text-white transition-colors">About Us</Link></li>
-                <li><Link to="/team" className="text-sky-300 hover:text-white transition-colors">Our Team</Link></li>
-                <li><Link to="/careers" className="text-sky-300 hover:text-white transition-colors">Careers</Link></li>
-                <li><Link to="/blog" className="text-sky-300 hover:text-white transition-colors">Blog</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Legal</h4>
-              <ul className="space-y-2">
-                <li><Link to="/privacy" className="text-sky-300 hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="text-sky-300 hover:text-white transition-colors">Terms of Service</Link></li>
-                <li><Link to="/cookies" className="text-sky-300 hover:text-white transition-colors">Cookie Policy</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-sky-800/30 pt-8 text-center">
-            <p className="text-sky-300">
-              &copy; {currentYear} SwiftTech Company Ltd. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
+
   );
 };
 
