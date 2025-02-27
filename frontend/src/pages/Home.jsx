@@ -1,62 +1,112 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import hero from './../assets/1.jpg';
-import NavBar from '../components/Navbar';
+import hero from './../assets/5.jpg';
 import Layout from './Layout';
 
 const Home = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  // Text animation effect
+  useEffect(() => {
+    setIsLoaded(true);
+    
+    // Trigger scroll animations on scroll
+    const handleScroll = () => {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+          element.classList.add('animate-visible');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   return (
     <Layout>
-
-      {/* Hero Section - Full Screen with Gradient Overlay */}
+      {/* Enhanced Hero Section with Dynamic Animations */}
       <section className="h-screen w-full flex items-center justify-center relative overflow-hidden pt-16">
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/70 to-emerald-950/70"></div>
-        <div className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay" style={{ backgroundImage: `url(${hero})` }}></div>
-        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-1">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            WhatsApp Marketing <span className="text-emerald-400 block sm:inline">Made Simple</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-emerald-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Reach thousands of customers instantly with our powerful WhatsApp bulk messaging platform. Connect, engage, and convert with personalized messages.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link
-              to="/signup"
-              className="bg-emerald-600 text-white px-8 py-4 rounded-lg hover:bg-emerald-500 transition-all shadow-lg hover:shadow-emerald-500/25 font-medium text-lg"
-            >
-              Start For Free
-            </Link>
-            <Link
-              to="/demo"
-              className="bg-transparent text-white border-2 border-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-all shadow-lg font-medium text-lg"
-            >
-              Request Demo
-            </Link>
-          </div>
+        {/* Animated gradient background with subtle movement */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/80 via-emerald-900/70 to-emerald-800/60 animate-gradient"></div>
+        
+        {/* Parallax hero image effect */}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay"
+          style={{ 
+            backgroundImage: `url(${hero})`,
+            transform: `translateY(${isLoaded ? '0px' : '20px'})`,
+            transition: 'transform 1.5s ease-out, opacity 2s ease-in-out',
+          }}
+        ></div>
+        
+        {/* Floating particles effect */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(15)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full bg-emerald-400/30"
+              style={{
+                width: `${Math.random() * 10 + 5}px`,
+                height: `${Math.random() * 10 + 5}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `float ${Math.random() * 10 + 10}s linear infinite`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
+            ></div>
+          ))}
         </div>
-      </section>
-
-      {/* Statistics Section - With Card Style */}
-      <section className="bg-emerald-900/20 py-20 backdrop-blur-sm border-y border-emerald-800/20">
-        <div className="w-full mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="bg-emerald-800/10 p-6 rounded-xl shadow-sm border border-emerald-700/20">
-              <p className="text-5xl font-bold text-emerald-400 mb-2">10M+</p>
-              <p className="text-emerald-100 font-medium">Messages Sent Daily</p>
-            </div>
-            <div className="bg-emerald-800/10 p-6 rounded-xl shadow-sm border border-emerald-700/20">
-              <p className="text-5xl font-bold text-emerald-400 mb-2">5K+</p>
-              <p className="text-emerald-100 font-medium">Active Businesses</p>
-            </div>
-            <div className="bg-emerald-800/10 p-6 rounded-xl shadow-sm border border-emerald-700/20">
-              <p className="text-5xl font-bold text-emerald-400 mb-2">98%</p>
-              <p className="text-emerald-100 font-medium">Delivery Rate</p>
-            </div>
-            <div className="bg-emerald-800/10 p-6 rounded-xl shadow-sm border border-emerald-700/20">
-              <p className="text-5xl font-bold text-emerald-400 mb-2">24/7</p>
-              <p className="text-emerald-100 font-medium">Support</p>
+        
+        {/* Content with staggered fade-in animations */}
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <div className={`transition-all duration-1000 transform ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-none">
+              <span className="inline-block overflow-hidden">
+                <span className={`inline-block transition-transform duration-1000 delay-300 ${isLoaded ? 'transform-none' : 'translate-y-full'}`}>
+                  WhatsApp Marketing{" "}
+                </span>
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 block sm:inline overflow-hidden">
+                <span className={`inline-block transition-transform duration-1000 delay-500 ${isLoaded ? 'transform-none' : 'translate-y-full'}`}>
+                  Made Simple
+                </span>
+              </span>
+            </h1>
+            
+            <p className={`text-xl sm:text-2xl text-emerald-50 mb-12 max-w-3xl mx-auto leading-relaxed font-light transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-6'}`}>
+              Reach <span className="text-emerald-300 font-normal relative">
+                <span className="relative z-10">thousands of customers</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-300 transition-all duration-1000 delay-1500" style={{ width: isLoaded ? '100%' : '0%' }}></span>
+              </span> instantly with our powerful WhatsApp bulk messaging platform. Connect, engage, and convert with personalized messages.
+            </p>
+            
+            <div className={`flex flex-col sm:flex-row justify-center space-y-5 sm:space-y-0 sm:space-x-8 transition-all duration-1000 delay-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-6'}`}>
+              <Link
+                to="/signup"
+                className="group bg-emerald-600 text-white px-10 py-5 rounded-xl shadow-lg hover:shadow-emerald-500/40 transition-all duration-300 font-medium text-lg relative overflow-hidden"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-500 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
+                <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">Start For Free</span>
+                <span className="absolute -right-2 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:right-4 transition-all duration-300">
+                  →
+                </span>
+              </Link>
+              
+              <Link
+                to="/demo"
+                className="group bg-transparent text-white border-2 border-emerald-400 px-10 py-5 rounded-xl hover:bg-emerald-400/20 transition-all duration-300 shadow-lg hover:shadow-emerald-400/20 font-medium text-lg overflow-hidden relative"
+              >
+                <span className="absolute inset-0 w-0 bg-emerald-400/30 transition-all duration-500 group-hover:w-full"></span>
+                <span className="relative z-10">Request Demo</span>
+              </Link>
             </div>
           </div>
+          
         </div>
       </section>
 
