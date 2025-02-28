@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Layout from './Layout';
+import img from './../../assets/4.jpg'
+import img2 from './../../assets/5.jpg'
 
 // New icons for Help & Support page
 const DocumentIcon = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>;
@@ -78,42 +80,42 @@ const HelpAndSupport = () => {
             id: 1,
             title: 'Getting Started with WhatsBulk',
             duration: '5:32',
-            thumbnail: '/api/placeholder/320/180',
+            thumbnail: `${img}`,
             url: 'https://www.youtube.com/watch?v=cleQjLtKNGM'
         },
         {
             id: 2,
             title: 'Creating Your First Campaign',
             duration: '7:14',
-            thumbnail: '/api/placeholder/320/180',
+            thumbnail: `${img2}`,
             url: 'https://www.youtube.com/watch?v=cleQjLtKNGM'
         },
         {
             id: 3,
             title: 'Advanced Contact Management',
             duration: '8:45',
-            thumbnail: '/api/placeholder/320/180',
+            thumbnail: `${img}`,
             url: 'https://www.youtube.com/watch?v=cleQjLtKNGM'
         },
         {
             id: 4,
             title: 'Message Templates and Variables',
             duration: '6:22',
-            thumbnail: '/api/placeholder/320/180',
+            thumbnail: `${img2}`,
             url: 'https://www.youtube.com/watch?v=cleQjLtKNGM'
         },
         {
             id: 5,
             title: 'Understanding Analytics',
             duration: '9:17',
-            thumbnail: '/api/placeholder/320/180',
+            thumbnail: `${img}`,
             url: 'https://www.youtube.com/watch?v=cleQjLtKNGM'
         },
         {
             id: 6,
             title: 'WhatsApp Business API Integration',
             duration: '11:03',
-            thumbnail: '/api/placeholder/320/180',
+            thumbnail: `${img2}`,
             url: 'https://www.youtube.com/watch?v=cleQjLtKNGM'
         }
     ];

@@ -63,7 +63,7 @@ const Home = () => {
         </div>
         
         {/* Content with staggered fade-in animations */}
-        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-1">
           <div className={`transition-all duration-1000 transform ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-none">
               <span className="inline-block overflow-hidden">
@@ -80,7 +80,7 @@ const Home = () => {
             
             <p className={`text-xl sm:text-2xl text-emerald-50 mb-12 max-w-3xl mx-auto leading-relaxed font-light transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-6'}`}>
               Reach <span className="text-emerald-300 font-normal relative">
-                <span className="relative z-10">thousands of customers</span>
+                <span className="relative z-1">thousands of customers</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-300 transition-all duration-1000 delay-1500" style={{ width: isLoaded ? '100%' : '0%' }}></span>
               </span> instantly with our powerful WhatsApp bulk messaging platform. Connect, engage, and convert with personalized messages.
             </p>
@@ -91,7 +91,7 @@ const Home = () => {
                 className="group bg-emerald-600 text-white px-10 py-5 rounded-xl shadow-lg hover:shadow-emerald-500/40 transition-all duration-300 font-medium text-lg relative overflow-hidden"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-500 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
-                <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">Start For Free</span>
+                <span className="relative z-1 group-hover:scale-105 transition-transform duration-300">Start For Free</span>
                 <span className="absolute -right-2 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:right-4 transition-all duration-300">
                   →
                 </span>
@@ -102,7 +102,7 @@ const Home = () => {
                 className="group bg-transparent text-white border-2 border-emerald-400 px-10 py-5 rounded-xl hover:bg-emerald-400/20 transition-all duration-300 shadow-lg hover:shadow-emerald-400/20 font-medium text-lg overflow-hidden relative"
               >
                 <span className="absolute inset-0 w-0 bg-emerald-400/30 transition-all duration-500 group-hover:w-full"></span>
-                <span className="relative z-10">Request Demo</span>
+                <span className="relative z-1">Request Demo</span>
               </Link>
             </div>
           </div>
@@ -182,19 +182,19 @@ const Home = () => {
               <div className="bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg shadow-emerald-600/30">1</div>
               <h3 className="text-2xl font-semibold text-white mb-3">Sign Up</h3>
               <p className="text-emerald-200">Create your account and connect your WhatsApp Business API</p>
-              <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-emerald-600 to-transparent -z-10"></div>
+              <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-emerald-600 to-transparent -z-1"></div>
             </div>
             <div className="text-center relative">
               <div className="bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg shadow-emerald-600/30">2</div>
               <h3 className="text-2xl font-semibold text-white mb-3">Import Contacts</h3>
               <p className="text-emerald-200">Upload your contacts or connect your CRM to import customers</p>
-              <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-emerald-600 to-transparent -z-10"></div>
+              <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-emerald-600 to-transparent -z-1"></div>
             </div>
             <div className="text-center relative">
               <div className="bg-teal-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg shadow-teal-600/30">3</div>
               <h3 className="text-2xl font-semibold text-white mb-3">Create Campaign</h3>
               <p className="text-emerald-200">Design your message with our intuitive template builder</p>
-              <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-teal-600 to-transparent -z-10"></div>
+              <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-teal-600 to-transparent -z-1"></div>
             </div>
             <div className="text-center">
               <div className="bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg shadow-emerald-600/30">4</div>
@@ -319,7 +319,7 @@ const Home = () => {
             </ul>
             <Link to="/signup" className="block text-center bg-white/20 hover:bg-white/30 text-white py-3 px-4 rounded-lg transition-colors font-medium">Get Started</Link>
           </div>
-          <div className="bg-gradient-to-b from-emerald-900/40 to-emerald-900/40 backdrop-blur-sm p-8 rounded-xl shadow-xl border border-emerald-500/30 relative transform scale-105 z-10">
+          <div className="bg-gradient-to-b from-emerald-900/40 to-emerald-900/40 backdrop-blur-sm p-8 rounded-xl shadow-xl border border-emerald-500/30 relative transform scale-105 z-1">
             <div className="absolute top-0 right-0 bg-emerald-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">POPULAR</div>
             <h3 className="text-2xl font-semibold text-white mb-2">Professional</h3>
             <p className="text-emerald-200 mb-6">For growing businesses with active campaigns</p>
