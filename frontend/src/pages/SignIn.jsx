@@ -26,7 +26,8 @@ const SignIn = () => {
     console.log('Form submitted:', formData);
 
     // Redirect to the dashboard after successful sign-in
-    navigate('/dashboard'); // Redirect to the dashboard page
+    // navigate('/dashboard'); // Redirect to the dashboard page
+    navigate('/admin-dashboard'); // Redirect to the dashboard page
   };
 
   return (

@@ -18,6 +18,21 @@ import CustomerTemplates from './pages/Customer/Templates';
 import Analytics from './pages/Customer/Analytics';
 import Settings from './pages/Customer/Settings';
 import HelpAndSupport from './pages/Customer/HelpAndSupport';
+import AdminPanel from './pages/Admin/AdminPanel';
+import DashboardPage from './pages/Admin/AdminDashboard';
+import UserManagementPage from './pages/Admin/UserManagementPage';
+import SubscriptionsPage from './pages/Admin/SubscriptionsPage';
+import BillingPage from './pages/Admin/BillingPage';
+import WhatsAppAPIPage from './pages/Admin/WhatsAppAPIPage';
+import CampaignReviewPage from './pages/Admin/CampaignReviewPage';
+import TemplateLibraryPage from './pages/Admin/TemplateLibraryPage';
+import MessageDeliveryPage from './pages/Admin/MessageDeliveryPage';
+import UsageReportsPage from './pages/Admin/UsageReportsPage';
+import UserMetrics from './pages/Admin/UserMetrics';
+import AuditLogs from './pages/Admin/AuditLogs';
+import SystemNotificationsPage from './pages/Admin/SystemNotificationsPage';
+import SystemSettings from './pages/Admin/SystemSettings';
+import SupportTicketsPage from './pages/Admin/SupportTicketsPage';
 
 const App = () => {
   return (
@@ -42,6 +57,22 @@ const App = () => {
       <Route path="/analytics" element={<Analytics />} />
       <Route path="/settings" element={<Settings />} />
       <Route path="/help" element={<HelpAndSupport />} />
+
+      <Route path="/admin-dashboard" element={<AdminPanel />} />
+      <Route path="/admin/dashboard" element={<DashboardPage />} />
+      <Route path="/admin/users" element={<UserManagementPage />} />
+      <Route path="/admin/subscriptions" element={<SubscriptionsPage />} />
+      <Route path="/admin/billing" element={<BillingPage />} />
+      <Route path="/admin/api" element={<WhatsAppAPIPage />} />
+      <Route path="/admin/campaigns" element={<CampaignReviewPage />} />
+      <Route path="/admin/templates" element={<TemplateLibraryPage />} />
+      <Route path="/admin/delivery" element={<MessageDeliveryPage />} />
+      <Route path="/admin/reports" element={<UsageReportsPage />} />
+      <Route path="/admin/metrics" element={<UserMetrics />} />
+      <Route path="/admin/logs" element={<AuditLogs />} />
+      <Route path="/admin/tickets" element={<SupportTicketsPage />} />
+      <Route path="/admin/notifications" element={<SystemNotificationsPage />} />
+      <Route path="/admin/settings" element={<SystemSettings />} />
     </Routes>
   );
 };
