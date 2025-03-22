@@ -244,7 +244,7 @@ const CampaignReviewPage = () => {
                           onClick={() => setSelectedCampaign(campaign)}
                           className="text-emerald-400 hover:text-emerald-300 bg-emerald-800/30 hover:bg-emerald-800/50 px-3 py-1 rounded-md"
                         >
-                          Review
+                        <i className="bi bi-arrow-right"></i>
                         </button>
                       </td>
                     </tr>
