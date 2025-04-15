@@ -91,7 +91,7 @@ const Home = () => {
                 className="group bg-emerald-600 text-white px-10 py-5 rounded-xl shadow-lg hover:shadow-emerald-500/40 transition-all duration-300 font-medium text-lg relative overflow-hidden"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-500 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
-                <span className="relative z-1 group-hover:scale-105 transition-transform duration-300">Start For Free</span>
+                <span className="relative z-1 group-hover:scale-105 transition-transform duration-300">Start Now</span>
                 <span className="absolute -right-2 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:right-4 transition-all duration-300">
                   →
                 </span>
