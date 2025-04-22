@@ -51,7 +51,7 @@ const AdminLayout = ({ children, activePage = "dashboard" }) => {
       name: "Support",
       items: [
         { name: 'Support Tickets', icon: <SupportTicketsIcon />, path: '/admin/tickets', id: 'tickets' },
-        { name: 'System Notifications', icon: <NotificationsIcon />, path: '/admin/notifications', id: 'notifications' },
+        // { name: 'System Notifications', icon: <NotificationsIcon />, path: '/admin/notifications', id: 'notifications' },
       ]
     },
     {
