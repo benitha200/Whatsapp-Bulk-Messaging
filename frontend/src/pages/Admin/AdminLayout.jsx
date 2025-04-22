@@ -177,7 +177,7 @@ const AdminLayout = ({ children, activePage = "dashboard" }) => {
         {/* Footer */}
         <footer className="w-full bg-emerald-950/80 backdrop-blur-sm py-6 border-t border-emerald-800/20 mt-8">
           <div className="px-4 md:px-6">
-            <p className="text-emerald-200 text-center text-sm">© 2023 WhatsBulk. All rights reserved. <span className="text-emerald-400">Admin Portal</span></p>
+            <p className="text-emerald-200 text-center text-sm">© 2024 WhatsBulk. All rights reserved. <span className="text-emerald-400">Admin Portal</span></p>
           </div>
         </footer>
       </main>
